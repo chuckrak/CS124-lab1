@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/1faf9bfef0.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="Header">
+                        <p id="time">5:24</p>
+                        <p id="day">Today is February 7th</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="taskFilter">
+                        <label class="btn btn-lg btn-secondary" id="incompleteToggle">
+                            <input type="radio" name="options" id="option1" autocomplete="off"> Incomplete
+                        </label>
+                        <label class="btn btn-lg btn-secondary active" id="allToggle" active>
+                            <input type="radio" name="options" id="option2" autocomplete="off"> All
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-content-center">
+                <div class="col-12">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="newTaskInput" value="" placeholder="Eat Lunch" aria-label="Add Task" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-lg" id="addTaskButton" type="button">Add</button>
+                            <button class="btn btn-lg" id="deleteCompletedTasks">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>	     
+                </div>
+            </div>		
+            <div class="row">
+                <div class="col-12 align-items-center">
+                    <div class="Task">
+                        Buy New John Grisham Book
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
