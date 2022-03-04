@@ -1,10 +1,4 @@
-/* 
-PEACH1 : #F39189
-BLUE1: #046582
-Peachoff #BB8082
-Grey #6E7582
 
-*/
 
 body{
     background-image: url('https://wallpaperbat.com/img/554289-do-you-want-to-gain-some-natural-inspirations-be-dazzle-by-the-inspiration-you-can-find-at-pullcasteu-sunset-wallpaper-sky-aesthetic-beach-wallpaper.jpg')
@@ -21,32 +15,24 @@ body{
     grid-template-rows: auto;
 }
 
-
+.top-buffer {
+    margin-top: 5px;
+}
 
 .Task{
     text-align: left;
-    color: antiquewhite;
+    color: antiquewhite !important;
     border-color:bisque;
     border-style: solid;
     border-width: 3px;
     font-family: Georgia;
-    font-size: 40px;
+    font-size: 30px;
     opacity: 62%;
     padding: 5px;
+    display: inline-block;
+
 }
 
-.TaskDone{
-    text-align: left;
-    color: antiquewhite;
-    border-color:bisque;
-    border-style: solid;
-    border-width: 3px;
-    font-family: Georgia;
-    font-size: 40px;
-    opacity: 62%;
-    padding: 5px;
-    text-decoration: line-through
-}
 
 .AddNew{
     color: antiquewhite;
@@ -57,18 +43,18 @@ body{
 
 .Header{
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #time{
-    font-size: 140px;
+    font-size: 90px;
     font-weight: lighter;
     margin: 5px;
     text-align: left;
 }
 
 #day{
-    font-size: 60px;
+    font-size: 40px;
     font-weight: lighter;
     margin: 5px;
     text-align: left;
@@ -79,11 +65,23 @@ body{
     
 }
 
+.TaskDone:hover{
+    background-color: black;
+    
+}
+
 #paragraph{
     font-size: 40px;
 }
 
+.SelectedTab{
+    background-color:darkslategrey;
+    min-width: 100%;
+}
 
+.Tab{
+    background-color: grey;
+}
 
 .CompletedTask{
     text-align: left;
@@ -93,10 +91,10 @@ body{
     border-style: solid;
     border-width: 3px;
     font-family: Georgia;
-    font-size: 40px;
+    font-size: 30px;
     opacity: 62%;
     padding: 5px;
-    min-height: ;
+    /* min-height: ; */
     text-decoration: line-through;
     text-decoration-thickness: 2px;
     opacity: 50%;
@@ -124,7 +122,7 @@ body{
     border-style: solid;
     border-width: 3px;
     font-family: Georgia;
-    font-size: 40px;
+    font-size: 30px;
     opacity: 62%;
     padding: 5px;
 }
@@ -153,11 +151,73 @@ body{
     border-color:bisque;
     font-family: Georgia;
     font-weight: bold;
-
+    height:100%;
 }
 
 #deleteCompletedTasks{
     background-color:antiquewhite;
     border-color:antiquewhite;
     color:grey;
+}
+
+div FontAwesomeIcon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+
+  }
+
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 640pt;
+    right: 360pt;
+    width: 360pt;
+    height: 640pt;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.taskModal {
+    background-color: antiquewhite;
+    border-radius: 5pt;
+    border-color: bisque;
+    border-style: solid;
+    margin: 200px 22px 0px 20px;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 300px;
+    padding: 10pt;
+    position: relative;
+}
+
+.alert-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    background-color: antiquewhite;
+    color:antiquewhite;
+}
+
+.alert-button.alert-cancel{
+    color:#6E7582;
+    background-color:antiquewhite;
+    border-color: bisque;
+}
+
+.alert-button.alert-ok{
+    color:#6E7582;
+    background-color:antiquewhite;
+    border-color:bisque;
+}
+
+.taskEditor{
+    background-color: white;
+    border-color:bisque;
+    border-radius:3px;
+    border-width: 1px;
 }
