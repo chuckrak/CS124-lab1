@@ -1,0 +1,418 @@
+
+
+body{
+    /* background-image: url('https://wallpaperbat.com/img/554289-do-you-want-to-gain-some-natural-inspirations-be-dazzle-by-the-inspiration-you-can-find-at-pullcasteu-sunset-wallpaper-sky-aesthetic-beach-wallpaper.jpg') */
+     /* background-color: #046582;   */
+    /* background-color: #F5685D; */
+    /* background-image: linear-gradient(#455486
+    ,#046582); */
+    background:            linear-gradient(to left top,#455486 , #046582);
+    background-attachment: fixed;
+   
+}
+
+
+
+
+.container{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+}
+
+.top-buffer {
+    margin-top: 5px;
+}
+
+.low {
+    color: lightgreen;
+}
+
+.high {
+    color:rgb(253, 18, 18);
+}
+
+.medium{
+    color: antiquewhite;
+}
+
+.Task{
+    background: none;
+    text-align: left;
+    color: antiquewhite;
+    border-color:bisque;
+    border-style: solid;
+    border-width: 3px;
+    font-family: Georgia;
+    font-size: 30px;
+    opacity: 62%;
+    padding: 5px;
+    /* display: inline-block; */
+    width: 100%;
+}
+    
+    
+.CompletedTask{
+    background: none;
+    text-align: left;
+    color: antiquewhite;
+    /* border-radius: 30px; */
+    border-color:bisque;
+    border-style: solid;
+    border-width: 3px;
+    font-family: Georgia;
+    font-size: 30px;
+    opacity: 62%;
+    padding: 5px;
+    /* min-height: ; */
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.CompletedBar {
+    background:none;
+    border:none;
+}
+
+
+.AddNew{
+    color: antiquewhite;
+    font-family: Georgia;
+    opacity: 62%;
+    
+}
+
+.Header{
+    text-align: center;
+    font-size: 40px;
+}
+
+.verify{
+    color: black;
+    
+}
+
+.justify-content-center{
+    text-align:center;
+    background: none;
+    border: none;
+    color: antiquewhite;
+    
+}
+
+#time{
+    font-size: 90px;
+    font-weight: lighter;
+    margin: 5px;
+    text-align: left;
+}
+
+#day{
+    font-size: 40px;
+    font-weight: lighter;
+    margin: 5px;
+    text-align: left;
+}
+
+.loginLabels{
+    font-size: 20px;
+    font-weight: normal;
+    margin: 5px;
+    text-align: left;
+}
+
+.Task:hover{
+    background-color: black;
+    
+}
+
+.TaskDone:hover{
+    background-color: black;
+    
+}
+
+#paragraph{
+    font-size: 40px;
+}
+
+.SelectedTab{
+    background-color:darkslategrey;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: antiquewhite;
+    font-family: Georgia;
+}
+
+.Tab{
+    background-color: grey;
+    border-radius: 5px;
+    text-align: center;
+    color: antiquewhite;
+    font-family: Georgia;
+}
+
+
+
+
+#incompleteToggle{
+    width:50%;
+}
+#allToggle{
+    width: 50%;
+}
+#taskFilter{
+    width: 100%;
+}
+
+.loginInput {
+    background-color: transparent;
+    color: antiquewhite; 
+    text-align: left;
+    border-color:bisque;
+    border-style: solid;
+    border-width: 3px;
+    font-family: Georgia;
+    font-size: 30px;
+    opacity: 62%;
+    padding: 5px;
+
+}
+
+#newTaskInput{
+    background-color: transparent;
+    color: antiquewhite; 
+    text-align: left;
+    /* color: antiquewhite; */
+    /* border-radius: 30px; */
+    border-color:bisque;
+    border-style: solid;
+    border-width: 3px;
+    font-family: Georgia;
+    font-size: 30px;
+    opacity: 62%;
+    padding: 5px;
+}
+
+.form-contorl::-webkit-input-placeholder {
+    color:  antiquewhite !important;
+    opacity: 1;
+}
+
+.NoTasks{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 100px;
+    font-size: 70px;
+    color: antiquewhite;
+    text-transform: lowercase;
+    opacity: 90%;
+}
+
+.form-control::placeholder{
+    color:antiquewhite;
+}
+#addTaskButton{
+    color: grey;
+    background-color:bisque;
+    border-color:bisque;
+    font-family: Georgia;
+    font-weight: bold;
+    height:100%;
+}
+
+#deleteCompletedTasks{
+    background-color:antiquewhite;
+    border-color:antiquewhite;
+    color:grey;
+}
+
+div FontAwesomeIcon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+
+  }
+
+
+  .backdrop {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 100%;
+    right: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.taskModal {
+    background-color: antiquewhite;
+    border-radius: 5pt;
+    border-color: bisque;
+    border-style: solid;
+    margin: auto;
+    width: 50%;
+    min-width: 320px;
+    padding: 10pt;
+}
+
+.alert-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    background-color: antiquewhite;
+    color:antiquewhite;
+}
+
+.alert-button.alert-cancel{
+    color:#6E7582;
+    background-color:antiquewhite;
+    border-color: bisque;
+}
+
+.alert-button.alert-ok{
+    color:#6E7582;
+    background-color:antiquewhite;
+    border-color:bisque;
+}
+
+.margin{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.priority-button {
+    color:#6E7582;
+    background-color:antiquewhite;
+    border-color: bisque;
+}
+.taskEditor{
+    background-color: white;
+    border-color:bisque;
+    border-radius:3px;
+    border-width: 1px;
+}
+
+
+.taskDeleter{
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.trashIcon{
+    margin-left:10px;
+}
+
+#low {
+    color:blue
+}
+
+.taskLists{
+    width: 100%;
+    margin-top: .375rem;
+    background-color: grey;
+    border-color:grey;
+    font-family: Georgia;
+    color:antiquewhite;
+    height: 2.25rem;
+}
+
+.btn-success:hover{
+    color:antiquewhite;
+    background-color: rgb(45, 33, 33);
+    border-color: grey;
+    font-family: Georgia;
+}
+
+.btn-success:focus{
+    color:antiquewhite;
+    background-color: rgb(45, 33, 33);
+    border-color: grey;
+    font-family: Georgia;
+}
+
+.btn-success:active{
+    background-color: grey;
+    color:antiquewhite;
+    border-color: grey;
+    font-family: Georgia;
+}
+
+.show > .btn-success.dropdown-toggle {
+    background-color: grey;
+    border-color: grey;
+    color:antiquewhite;
+    font-family: Georgia;
+}
+
+.Sorter{
+    margin-top: 0.375rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    height: 2.25rem;
+}
+
+.smallPadding{
+    padding: 1px 12px;
+}
+
+h3{
+    color:#455486;
+    font-family:Georgia;
+}
+
+.dropdownMenu{
+    width: 100%;
+}
+
+.headerButtons{
+    text-align: right;
+}
+
+.topRightButtons{
+    /* float: right; */
+    margin-top: .75rem;
+    margin-right: .25rem;
+    background: none;
+    border: none;
+    margin-left: 1rem;
+}
+.signOutButton{
+    background: none;
+    border: none;
+    /* float: right; */
+    text-align: left;
+}
+.TaskFocusButton{
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.sharedUsers{
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+.notOwner{
+    color: inherit;
+}
+
+.owner{
+    color: #079807;
+}

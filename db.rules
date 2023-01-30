@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // checks that the user us signed in
+    function signedIn() {
+        return request.auth.uid != null;
+    }
+
+    // checks to see if the user is the owner of the task list
+    function isDocOwner() {
+        return request.auth.token.email == resource.data.owner;
+    }
+    
+    // checks which task lists are shared with the user
+    function isSharedWithMe() {
+        return request.auth.token.email in resource.data.hasAccess;
+    }
+    
+    
+    match /taskLists/{taskListID}{
+        allow read: if signedIn() && isSharedWithMe();
+        allow update: if signedIn();
+        allow create: if signedIn();
+        allow delete: if signedIn() && isDocOwner();
+
+    
+        match /tasks/{taskID} {
+            allow read, create, update: if true;
+            allow delete: if true;
+        }
+    }
+  }
+}
+
